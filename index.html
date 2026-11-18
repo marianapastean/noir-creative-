@@ -2,1167 +2,2595 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#211329">
-<meta name="description" content="ARVANA Digital Marketing — Direcție clară. Branduri cu valoare. Strategie de brand, poziționare și marketing strategic.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#211329">
+  <meta name="description" content="ARVANA Digital Marketing — Direcție clară. Branduri cu valoare. Strategie de brand, poziționare și marketing.">
+  <title>ARVANA Digital Marketing | Direcție clară. Branduri cu valoare.</title>
 
-<title>ARVANA — Strategic Marketing & Brand Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --aubergine: #211329;
+      --deep: #170d1d;
+      --plum: #493052;
+      --plum-light: #74577d;
+      --ivory: #f4efe6;
+      --cream: #e9dfd1;
+      --gold: #b99a62;
+      --gold-light: #d8bd8a;
+      --white: #fffdf9;
+      --muted: #b9adbd;
+      --line: rgba(185,154,98,.28);
+      --sans: "DM Sans", sans-serif;
+      --serif: "Cormorant Garamond", serif;
+    }
 
-<style>
-:root {
-  --aubergine:#211329;
-  --deep:#170d1d;
-  --plum:#493052;
-  --plum-light:#74577d;
-  --ivory:#f4efe6;
-  --cream:#e9dfd1;
-  --gold:#b99a62;
-  --gold-light:#d8bd8a;
-  --white:#fffdf9;
-  --muted:#a99cab;
-  --sans:'DM Sans',sans-serif;
-  --serif:'Cormorant Garamond',serif;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:auto}
-body{
-  background:var(--aubergine);
-  color:var(--white);
-  font-family:var(--sans);
-  overflow-x:hidden;
-  cursor:auto;
-}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-::selection{background:var(--gold);color:var(--deep)}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-#progress{
-  position:fixed;top:0;left:0;width:0;height:2px;
-  background:var(--gold);z-index:1000;
-}
-.noise{
-  position:fixed;inset:0;pointer-events:none;z-index:90;
-  opacity:.035;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
-}
-.container{width:min(1320px,88%);margin:auto}
-.eyebrow{
-  display:flex;align-items:center;gap:13px;
-  font-size:10px;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--gold);
-}
-.eyebrow:before{content:"";width:34px;height:1px;background:var(--gold)}
-.gold{color:var(--gold)}
-.serif{font-family:var(--serif);font-weight:400}
-.section-label{
-  font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--gold);
-}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  gap:20px;padding:17px 23px;
-  border:1px solid var(--gold);color:var(--white);
-  font-size:10px;letter-spacing:.16em;text-transform:uppercase;
-  transition:.4s ease;
-}
-.btn:hover{background:var(--gold);color:var(--deep)}
-.btn span{font-size:18px;transition:.3s}
-.btn:hover span{transform:translate(4px,-3px)}
-.btn-dark{color:var(--aubergine);border-color:var(--aubergine)}
-.btn-dark:hover{background:var(--aubergine);color:var(--ivory)}
+    body {
+      background: var(--deep);
+      color: var(--white);
+      font-family: var(--sans);
+      overflow-x: hidden;
+      font-size: 17px;
+      line-height: 1.7;
+    }
 
-/* NAVIGATION */
-header{
-  position:fixed;top:0;left:0;width:100%;z-index:500;
-  padding:24px 0;transition:.4s;
-}
-header.scrolled{
-  padding:13px 0;
-  background:rgba(23,13,29,.91);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(185,154,98,.15);
-}
-.nav{
-  width:min(1440px,90%);margin:auto;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.logo{display:flex;align-items:center;gap:12px}
-.logo-symbol{
-  width:35px;height:35px;border:1px solid var(--gold);
-  transform:rotate(45deg);position:relative;
-}
-.logo-symbol:after{
-  content:"";position:absolute;inset:7px;
-  border:1px solid var(--gold);opacity:.7;
-}
-.logo-text{font-family:var(--serif);font-size:27px;letter-spacing:.12em}
-.logo-text small{
-  display:block;font-family:var(--sans);font-size:7px;
-  letter-spacing:.27em;color:var(--gold);margin-top:-3px;
-}
-.nav-links{display:flex;align-items:center;gap:35px}
-.nav-links a{
-  font-size:9px;letter-spacing:.15em;text-transform:uppercase;
-  color:#e8dfeb;transition:.3s;
-}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{border-bottom:1px solid var(--gold);padding-bottom:7px}
-.menu-toggle{
-  display:none;background:none;border:0;color:var(--ivory);
-  font-size:25px;cursor:pointer;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* HERO */
-.hero{
-  min-height:100svh;position:relative;overflow:hidden;
-  display:flex;align-items:center;
-  background:
-  radial-gradient(ellipse at 72% 45%,rgba(116,87,125,.27),transparent 42%),
-  linear-gradient(125deg,#211329,#170d1d 80%);
-}
-.hero-grid{
-  display:grid;grid-template-columns:1.08fr .92fr;
-  align-items:center;gap:30px;padding-top:100px;
-}
-.hero-copy{position:relative;z-index:3}
-.hero h1{
-  font-family:var(--serif);font-size:clamp(70px,10.5vw,150px);
-  line-height:.78;letter-spacing:-.055em;font-weight:400;
-  margin:36px 0 30px;
-}
-.hero h1 span{display:block}
-.hero h1 .indent{padding-left:17%}
-.hero-description{
-  max-width:420px;font-size:13px;line-height:2;
-  color:#c6b9c9;margin:35px 0 30px;
-}
-.hero-meta{
-  display:flex;align-items:center;gap:20px;margin-top:50px;
-  font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
-}
-.hero-meta i{width:35px;height:1px;background:var(--gold)}
-.hero-visual{
-  min-height:590px;position:relative;
-  display:flex;align-items:center;justify-content:center;
-}
-.orbit{
-  position:absolute;width:min(43vw,540px);aspect-ratio:1;
-  border:1px solid rgba(185,154,98,.25);border-radius:50%;
-  animation:orbit 35s linear infinite;
-}
-.orbit:before,.orbit:after{
-  content:"";position:absolute;border:1px solid rgba(185,154,98,.17);
-  border-radius:50%;inset:12%;
-}
-.orbit:after{inset:25%;border-color:rgba(185,154,98,.12)}
-@keyframes orbit{to{transform:rotate(360deg)}}
-.hero-gem{
-  width:min(27vw,330px);aspect-ratio:1;position:relative;
-  background:
-  radial-gradient(circle at 35% 28%,#f2dfb8 0,#b99a62 10%,#74577d 32%,#493052 55%,#211329 75%);
-  clip-path:polygon(50% 0,88% 25%,100% 67%,62% 100%,17% 84%,0 40%);
-  filter:drop-shadow(0 25px 65px rgba(185,154,98,.2));
-  transform:rotate(-12deg);
-  animation:gemFloat 7s ease-in-out infinite;
-}
-.hero-gem:after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(130deg,transparent 35%,rgba(255,255,255,.3),transparent 58%);
-}
-@keyframes gemFloat{
-  0%,100%{transform:translateY(0) rotate(-12deg)}
-  50%{transform:translateY(-22px) rotate(1deg)}
-}
-.hero-side-note{
-  position:absolute;right:0;bottom:70px;writing-mode:vertical-rl;
-  font-size:9px;letter-spacing:.2em;color:var(--gold);
-}
-.hero-scroll{
-  position:absolute;bottom:32px;left:6%;
-  display:flex;align-items:center;gap:14px;
-  color:var(--muted);font-size:9px;letter-spacing:.2em;text-transform:uppercase;
-}
-.hero-scroll:before{content:"";height:45px;width:1px;background:var(--gold)}
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
 
-/* INTRO */
-.intro{
-  background:var(--ivory);color:var(--aubergine);
-  padding:150px 0 170px;position:relative;overflow:hidden;
-}
-.intro-top{display:flex;justify-content:space-between;align-items:center}
-.intro-title{
-  font-family:var(--serif);font-size:clamp(48px,7.5vw,105px);
-  line-height:.95;letter-spacing:-.04em;
-  max-width:1080px;margin:90px 0 60px;
-}
-.intro-title .line2{display:block;text-align:right}
-.intro-bottom{
-  display:flex;justify-content:space-between;align-items:end;
-  border-top:1px solid rgba(33,19,41,.22);padding-top:24px;
-}
-.intro-bottom p{max-width:360px;font-size:12px;line-height:2;color:#62566a}
-.intro-number{font-family:var(--serif);font-size:90px;color:var(--gold)}
+    ::selection {
+      background: var(--gold);
+      color: var(--deep);
+    }
 
-/* SCROLL EXPERIENCE */
-.experience{background:var(--deep)}
-.scene{
-  height:190svh;position:relative;
-  background:var(--deep);
-}
-.scene.light{background:var(--ivory);color:var(--aubergine)}
-.scene-pin{
-  position:sticky;top:0;height:100svh;overflow:hidden;
-  display:flex;align-items:center;
-}
-.scene-inner{
-  width:min(1320px,88%);height:100%;margin:auto;
-  position:relative;display:flex;align-items:center;
-}
-.scene-copy{
-  position:absolute;z-index:5;width:min(440px,42%);
-  transition:opacity .3s;
-}
-.scene-copy.left{left:0;text-align:left}
-.scene-copy.right{right:0;text-align:left}
-.scene-copy.center{
-  left:50%;top:50%;transform:translate(-50%,-50%);
-  width:min(500px,80%);text-align:center;
-}
-.scene-copy h2{
-  font-family:var(--serif);font-size:clamp(55px,7vw,100px);
-  font-weight:400;line-height:.86;letter-spacing:-.04em;
-  margin:28px 0;
-}
-.scene-copy p{font-size:12px;line-height:2.1;max-width:370px;color:#b7a9ba}
-.scene.light .scene-copy p{color:#716574}
-.scene-copy.center p{margin:auto}
-.scene-visual{
-  position:absolute;width:58%;height:75%;
-  top:50%;left:50%;transform:translate(-50%,-50%);
-  display:flex;align-items:center;justify-content:center;
-}
-.scene-visual.left{left:62%}
-.scene-visual.right{left:37%}
-.scene-index{
-  position:absolute;right:0;top:12%;
-  font-family:var(--serif);font-size:13px;color:var(--gold);
-}
-.visual-caption{
-  position:absolute;bottom:12%;left:0;
-  font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
-}
+    .progress {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background: var(--gold);
+      box-shadow: 0 0 14px rgba(185,154,98,.6);
+    }
 
-/* BRAND SCULPTURE */
-.brand-sculpture{
-  width:min(29vw,370px);aspect-ratio:1;position:relative;
-  transform:rotate(-15deg);
-}
-.sculpture-ring{
-  position:absolute;inset:5%;border:1px solid var(--gold);
-  border-radius:50%;transform:rotateX(65deg);
-}
-.sculpture-ring.r2{inset:18%;transform:rotateY(65deg)}
-.sculpture-ring.r3{inset:29%;transform:rotate(45deg);border-color:rgba(185,154,98,.4)}
-.sculpture-core{
-  position:absolute;width:35%;height:35%;top:32.5%;left:32.5%;
-  background:radial-gradient(circle at 30% 25%,#ead4a4,#b99a62 25%,#493052 70%,#211329);
-  clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
-  filter:drop-shadow(0 0 35px rgba(185,154,98,.3));
-}
-.scene.light .sculpture-ring{border-color:#9b7a48}
-.scene.light .sculpture-core{background:radial-gradient(circle at 30% 25%,#ead4a4,#b99a62 25%,#74577d 70%,#493052)}
+    /* NAVIGATION */
 
-/* POSITIONING */
-.position-graphic{
-  position:relative;width:min(38vw,460px);aspect-ratio:1;
-}
-.position-circle{
-  position:absolute;border:1px solid var(--gold);border-radius:50%;
-  top:50%;left:50%;transform:translate(-50%,-50%);
-}
-.position-circle:nth-child(1){width:100%;height:100%;opacity:.35}
-.position-circle:nth-child(2){width:76%;height:76%;opacity:.55}
-.position-circle:nth-child(3){width:52%;height:52%}
-.position-circle:nth-child(4){
-  width:23%;height:23%;background:var(--gold);
-  box-shadow:0 0 80px rgba(185,154,98,.3)
-}
-.position-dot{
-  position:absolute;width:9px;height:9px;border-radius:50%;
-  background:var(--gold);top:8%;left:50%;
-  box-shadow:0 0 18px var(--gold);
-}
-.position-text{
-  position:absolute;font-family:var(--serif);
-  color:var(--gold-light);font-size:18px;
-}
-.position-text.t1{top:2%;right:-12%}
-.position-text.t2{bottom:4%;left:-15%}
-.position-text.t3{right:-8%;bottom:28%}
+    .header {
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 19px 6.5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(244,239,230,.96);
+      color: var(--aubergine);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(73,48,82,.1);
+      transition: padding .3s ease;
+    }
 
-/* STRATEGY NETWORK */
-.network{
-  position:relative;width:min(48vw,580px);aspect-ratio:1;
-}
-.network svg{width:100%;height:100%;overflow:visible}
-.network circle{fill:var(--gold)}
-.network line{stroke:var(--gold);stroke-width:1;opacity:.55}
-.network .main-node{fill:var(--plum-light);stroke:var(--gold);stroke-width:2}
-.network .pulse{animation:pulse 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-@keyframes pulse{50%{opacity:.35;transform:scale(1.5)}}
+    .header.scrolled {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
 
-/* CONTENT */
-.content-panels{
-  position:relative;width:100%;height:100%;max-width:600px;
-}
-.content-panel{
-  position:absolute;width:49%;height:65%;
-  border:1px solid rgba(185,154,98,.55);
-  padding:25px;display:flex;flex-direction:column;justify-content:space-between;
-  background:linear-gradient(145deg,rgba(116,87,125,.45),rgba(33,19,41,.2));
-}
-.content-panel:first-child{top:4%;left:3%;transform:rotate(-7deg)}
-.content-panel:last-child{
-  bottom:1%;right:1%;transform:rotate(7deg);
-  background:linear-gradient(145deg,rgba(185,154,98,.22),rgba(73,48,82,.55));
-}
-.panel-no{font-family:var(--serif);font-size:48px;color:var(--gold)}
-.panel-title{font-family:var(--serif);font-size:clamp(25px,3vw,42px);line-height:.95}
-.panel-lines{display:grid;gap:8px}
-.panel-lines span{height:1px;background:rgba(185,154,98,.5)}
-.panel-lines span:nth-child(2){width:70%}
-.panel-lines span:nth-child(3){width:45%}
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
 
-/* GROWTH */
-.growth-graphic{width:100%;max-width:620px;position:relative}
-.growth-graphic svg{width:100%;overflow:visible}
-.growth-graphic path{
-  fill:none;stroke:var(--gold);stroke-width:2;
-  stroke-dasharray:1000;stroke-dashoffset:1000;
-}
-.growth-bars{display:flex;align-items:end;gap:12px;height:170px;position:absolute;bottom:0;left:8%;right:8%}
-.growth-bars span{
-  flex:1;height:var(--h);background:linear-gradient(to top,rgba(73,48,82,.2),rgba(185,154,98,.8));
-  border-top:1px solid var(--gold);
-  transform-origin:bottom;transform:scaleY(.05);
-}
-.growth-graphic .axis{stroke:rgba(185,154,98,.4);stroke-width:1}
+    .logo-main {
+      font-family: var(--serif);
+      font-size: 35px;
+      font-weight: 700;
+      letter-spacing: .13em;
+    }
 
-/* SERVICES */
-.services{
-  background:var(--ivory);color:var(--aubergine);
-  padding:150px 0 170px;position:relative;
-}
-.services-header{
-  display:flex;justify-content:space-between;align-items:end;
-  margin-bottom:80px;gap:30px;
-}
-.services-header h2{
-  font-family:var(--serif);font-size:clamp(65px,9vw,120px);
-  font-weight:400;line-height:.82;letter-spacing:-.04em;
-}
-.services-header p{max-width:270px;font-size:12px;line-height:2;color:#716574}
-.service-list{border-top:1px solid rgba(33,19,41,.3)}
-.service-item{
-  display:grid;grid-template-columns:90px 1fr 60px;
-  gap:20px;align-items:center;padding:28px 5px;
-  border-bottom:1px solid rgba(33,19,41,.25);
-  transition:.4s;
-}
-.service-item:hover{padding-left:25px;background:rgba(185,154,98,.09)}
-.service-item .number{font-family:var(--serif);font-size:23px;color:var(--gold)}
-.service-item h3{font-family:var(--serif);font-weight:400;font-size:clamp(27px,4vw,48px)}
-.service-item p{font-size:10px;color:#716574;margin-top:8px;letter-spacing:.04em}
-.service-item .arrow{font-size:27px;color:var(--gold);transition:.3s}
-.service-item:hover .arrow{transform:translate(5px,-5px)}
+    .logo-sub {
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-top: 5px;
+      font-weight: 700;
+    }
 
-/* STATEMENT */
-.statement{
-  min-height:85svh;display:flex;align-items:center;
-  background:linear-gradient(130deg,#493052,#211329 65%,#170d1d);
-  position:relative;overflow:hidden;text-align:center;
-}
-.statement:before,.statement:after{
-  content:"";position:absolute;border:1px solid rgba(185,154,98,.2);
-  width:60vw;aspect-ratio:1;border-radius:50%;left:50%;top:50%;
-  transform:translate(-50%,-50%);
-}
-.statement:after{width:42vw}
-.statement-inner{position:relative;z-index:2;width:min(950px,85%);margin:auto}
-.statement h2{
-  font-family:var(--serif);font-size:clamp(55px,9vw,115px);
-  font-weight:400;line-height:.9;letter-spacing:-.04em;margin:35px 0;
-}
-.statement p{max-width:460px;margin:auto;color:#c5b8c8;font-size:12px;line-height:2}
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
 
-/* PROCESS */
-.process{background:var(--ivory);color:var(--aubergine);padding:145px 0}
-.process-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:75px}
-.process-heading h2{
-  font-family:var(--serif);font-size:clamp(60px,8vw,105px);
-  font-weight:400;line-height:.85;
-}
-.process-heading p{max-width:260px;color:#716574;font-size:12px;line-height:2}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(33,19,41,.2)}
-.process-card{
-  background:var(--ivory);padding:35px 24px;min-height:250px;
-  transition:.4s;
-}
-.process-card:hover{background:#e9dfd1;transform:translateY(-8px)}
-.process-card .num{font-family:var(--serif);font-size:43px;color:var(--gold)}
-.process-card h3{font-family:var(--serif);font-size:30px;font-weight:400;margin:28px 0 12px}
-.process-card p{font-size:11px;line-height:1.9;color:#716574}
+    .nav a {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .035em;
+      position: relative;
+    }
 
-/* AUDIT */
-.audit{
-  background:var(--deep);padding:150px 0;position:relative;overflow:hidden;
-}
-.audit-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
-.audit-visual{
-  min-height:460px;position:relative;display:flex;align-items:center;justify-content:center;
-}
-.audit-orb{
-  width:min(30vw,360px);aspect-ratio:1;border-radius:50%;
-  background:radial-gradient(circle at 35% 30%,#d8bd8a,#74577d 35%,#493052 60%,#170d1d 78%);
-  box-shadow:0 0 100px rgba(185,154,98,.15);
-  position:relative;
-}
-.audit-orb:after{
-  content:"ARVANA";position:absolute;inset:0;
-  display:grid;place-items:center;font-family:var(--serif);
-  font-size:35px;letter-spacing:.15em;color:var(--white);
-}
-.audit-ring{
-  position:absolute;width:min(40vw,480px);aspect-ratio:1;
-  border:1px solid rgba(185,154,98,.4);border-radius:50%;
-  animation:orbit 40s linear infinite;
-}
-.audit-copy h2{
-  font-family:var(--serif);font-size:clamp(55px,7vw,90px);
-  font-weight:400;line-height:.9;margin:25px 0;
-}
-.audit-copy p{font-size:12px;line-height:2;color:#b7a9ba;max-width:450px;margin-bottom:30px}
-.audit-points{display:grid;gap:13px;margin:30px 0}
-.audit-points span{font-size:10px;letter-spacing:.08em;color:#ded4df}
-.audit-points span:before{content:"✦";color:var(--gold);margin-right:12px}
+    .nav a:not(.nav-cta)::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width .3s ease;
+    }
 
-/* CONTACT */
-.contact{
-  background:var(--ivory);color:var(--aubergine);
-  padding:145px 0 110px;
-}
-.contact-top{display:flex;justify-content:space-between;align-items:start;gap:40px}
-.contact h2{
-  font-family:var(--serif);font-size:clamp(65px,10vw,135px);
-  line-height:.82;letter-spacing:-.05em;font-weight:400;
-}
-.contact h2 span{display:block;padding-left:15%}
-.contact-note{max-width:240px;font-size:11px;line-height:2;color:#716574;padding-top:20px}
-.contact-bottom{
-  display:flex;justify-content:space-between;align-items:end;
-  border-top:1px solid rgba(33,19,41,.25);margin-top:100px;padding-top:25px;gap:20px;
-}
-.contact-email{font-family:var(--serif);font-size:clamp(19px,3vw,34px)}
-.contact-email:hover{color:var(--gold)}
-.contact-small{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:#716574}
+    .nav a:hover::after {
+      width: 100%;
+    }
 
-/* FOOTER */
-footer{background:var(--ivory);color:var(--aubergine);padding:0 0 30px}
-.footer-line{height:1px;background:rgba(33,19,41,.2);margin-bottom:25px}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.footer-brand{font-family:var(--serif);font-size:23px;letter-spacing:.1em}
-.footer-brand small{display:block;font-family:var(--sans);font-size:7px;letter-spacing:.25em;color:#8a7049}
-.footer-links{display:flex;gap:22px}
-.footer-links a,.copyright{font-size:9px;letter-spacing:.1em;color:#716574}
-.footer-links a:hover{color:var(--gold)}
+    .nav .nav-cta {
+      padding: 13px 21px;
+      background: var(--aubergine);
+      color: var(--ivory);
+      transition: .3s ease;
+    }
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(35px);transition:opacity .9s ease,transform .9s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-[data-parallax]{will-change:transform}
+    .nav .nav-cta:hover {
+      background: var(--gold);
+      color: var(--deep);
+    }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .nav-links{
-    display:none;position:absolute;top:65px;left:5%;width:90%;
-    background:rgba(23,13,29,.98);padding:30px;
-    flex-direction:column;align-items:flex-start;gap:25px;
-    border:1px solid rgba(185,154,98,.2);
-  }
-  .nav-links.open{display:flex}
-  .menu-toggle{display:block}
-  .hero-grid{grid-template-columns:1fr;padding-top:140px}
-  .hero-visual{min-height:400px;grid-row:1}
-  .hero-copy{grid-row:2;padding-bottom:100px}
-  .hero h1{font-size:clamp(72px,15vw,120px)}
-  .orbit{width:75vw}
-  .hero-gem{width:45vw}
-  .hero-side-note{right:2%;bottom:40px}
-  .scene{height:170svh}
-  .scene-copy{width:44%}
-  .scene-visual{width:65%}
-  .process-grid{grid-template-columns:repeat(2,1fr)}
-  .audit-grid{gap:25px}
-}
-@media(max-width:600px){
-  .container{width:88%}
-  header{padding:18px 0}
-  .logo-text{font-size:23px}
-  .hero-grid{padding-top:115px}
-  .hero-visual{min-height:310px}
-  .hero-copy{padding-bottom:80px}
-  .hero h1{font-size:clamp(67px,17vw,100px);margin:25px 0}
-  .hero-description{font-size:12px}
-  .hero-meta{margin-top:35px}
-  .hero-scroll{bottom:18px}
-  .intro{padding:100px 0}
-  .intro-title{font-size:clamp(47px,12vw,75px);margin:65px 0 45px}
-  .intro-bottom{align-items:start}
-  .intro-number{font-size:55px}
-  .intro-bottom p{font-size:11px;max-width:230px}
-  .scene{height:165svh}
-  .scene-pin{height:100svh}
-  .scene-inner{width:88%;align-items:flex-start}
-  .scene-copy,.scene-copy.left,.scene-copy.right{
-    width:100%;top:10%;left:0;right:auto;text-align:left;
-  }
-  .scene-copy h2{font-size:clamp(55px,13vw,76px);margin:20px 0}
-  .scene-copy p{font-size:11px;max-width:310px}
-  .scene-copy.center{
-    left:0;top:9%;transform:none;width:100%;text-align:left;
-  }
-  .scene-copy.center p{margin:0}
-  .scene-visual,.scene-visual.left,.scene-visual.right{
-    width:100%;height:50%;top:62%;left:50%;
-    transform:translate(-50%,-50%);
-  }
-  .scene-index{top:5%;font-size:11px}
-  .visual-caption{bottom:2%;font-size:8px}
-  .brand-sculpture{width:62vw}
-  .position-graphic{width:68vw}
-  .network{width:82vw}
-  .content-panels{height:100%;width:100%}
-  .content-panel{height:75%;width:48%;padding:15px}
-  .panel-no{font-size:35px}
-  .panel-title{font-size:27px}
-  .growth-graphic{width:100%}
-  .services{padding:100px 0}
-  .services-header{display:block;margin-bottom:50px}
-  .services-header h2{font-size:75px;margin-bottom:25px}
-  .services-header p{max-width:330px}
-  .service-item{grid-template-columns:45px 1fr 25px;gap:10px;padding:23px 0}
-  .service-item h3{font-size:29px}
-  .service-item p{font-size:9px;line-height:1.7}
-  .service-item .number{font-size:18px}
-  .statement{min-height:75svh}
-  .statement:before{width:100vw}
-  .statement:after{width:75vw}
-  .statement h2{font-size:clamp(55px,13vw,80px)}
-  .process{padding:100px 0}
-  .process-heading{display:block;margin-bottom:45px}
-  .process-heading h2{font-size:75px;margin-bottom:25px}
-  .process-grid{grid-template-columns:1fr 1fr}
-  .process-card{padding:22px 15px;min-height:220px}
-  .process-card h3{font-size:25px;margin:20px 0 10px}
-  .process-card p{font-size:10px}
-  .process-card .num{font-size:35px}
-  .audit{padding:100px 0}
-  .audit-grid{grid-template-columns:1fr}
-  .audit-visual{min-height:300px;grid-row:2}
-  .audit-orb{width:65vw}
-  .audit-ring{width:80vw}
-  .audit-copy h2{font-size:65px}
-  .contact{padding:100px 0 70px}
-  .contact-top{display:block}
-  .contact h2{font-size:clamp(65px,15vw,95px)}
-  .contact-note{margin-top:35px}
-  .contact-bottom{display:block;margin-top:65px}
-  .contact-email{display:block;margin-bottom:25px}
-  .footer-inner{flex-direction:column;align-items:flex-start}
-  .footer-links{flex-wrap:wrap;gap:15px}
-  .copyright{line-height:1.8}
-}
-@media(prefers-reduced-motion:reduce){
-  *,*:before,*:after{
-    animation-duration:.01ms!important;
-    animation-iteration-count:1!important;
-    transition-duration:.01ms!important;
-    scroll-behavior:auto!important;
-  }
-}
-</style>
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--aubergine);
+      font-size: 29px;
+      cursor: pointer;
+    }
+
+    /* GENERAL */
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(55px, 7.5vw, 105px);
+      font-weight: 400;
+      line-height: .94;
+      letter-spacing: -.035em;
+    }
+
+    .section-title em {
+      color: var(--gold-light);
+      font-weight: 400;
+    }
+
+    .gold {
+      color: var(--gold-light);
+    }
+
+    .section-intro {
+      color: #d2c8d5;
+      font-size: 19px;
+      line-height: 1.8;
+      max-width: 650px;
+    }
+
+    .small-label {
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100svh;
+      padding: 160px 8% 100px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      background:
+        linear-gradient(110deg, rgba(23,13,29,.98) 0%, rgba(33,19,41,.96) 58%, rgba(73,48,82,.8) 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -10%;
+      bottom: -45%;
+      width: 65vw;
+      height: 65vw;
+      border: 1px solid rgba(185,154,98,.16);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(76px, 12vw, 165px);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: .83;
+      max-width: 1100px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+      font-style: italic;
+      display: block;
+      padding-left: 12%;
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 65px;
+      max-width: 1050px;
+    }
+
+    .hero-description {
+      max-width: 490px;
+      color: #d4cbd7;
+      font-size: 20px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 15px 25px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      transition: .3s ease;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: var(--deep);
+    }
+
+    .button-primary:hover {
+      background: var(--white);
+      transform: translateY(-4px);
+    }
+
+    .button-outline {
+      border: 1px solid rgba(216,189,138,.6);
+      color: var(--ivory);
+    }
+
+    .button-outline:hover {
+      background: rgba(185,154,98,.12);
+      border-color: var(--gold-light);
+    }
+
+    .hero-note {
+      position: absolute;
+      right: 7%;
+      top: 44%;
+      writing-mode: vertical-rl;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .24em;
+      color: rgba(244,239,230,.48);
+    }
+
+    /* INTRO */
+
+    .intro {
+      background: var(--ivory);
+      color: var(--aubergine);
+      padding: 145px 9%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9%;
+      align-items: center;
+    }
+
+    .intro .eyebrow {
+      color: var(--plum);
+    }
+
+    .intro .eyebrow::before {
+      background: var(--gold);
+    }
+
+    .intro .section-title {
+      font-size: clamp(55px, 7vw, 90px);
+    }
+
+    .intro-copy {
+      font-size: 20px;
+      line-height: 1.9;
+      color: #55465b;
+    }
+
+    .intro-copy p + p {
+      margin-top: 22px;
+    }
+
+    .intro-signature {
+      margin-top: 35px;
+      color: var(--plum);
+      font-family: var(--serif);
+      font-size: 31px;
+      font-style: italic;
+    }
+
+    /* SCROLL EXPERIENCE */
+
+    .experience-heading {
+      padding: 130px 9% 75px;
+      background: var(--deep);
+    }
+
+    .experience-heading .section-title {
+      max-width: 900px;
+    }
+
+    .experience-heading .section-intro {
+      margin-top: 30px;
+    }
+
+    .scene {
+      min-height: 185svh;
+      position: relative;
+      background: var(--deep);
+      border-top: 1px solid rgba(185,154,98,.12);
+    }
+
+    .scene:nth-child(even) {
+      background: #1d1124;
+    }
+
+    .scene-sticky {
+      min-height: 100svh;
+      position: sticky;
+      top: 0;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 5%;
+      padding: 100px 8%;
+    }
+
+    .scene-copy {
+      position: relative;
+      z-index: 3;
+      max-width: 560px;
+      transition: opacity .3s ease;
+    }
+
+    .scene-copy h3 {
+      font-family: var(--serif);
+      font-size: clamp(53px, 6vw, 82px);
+      line-height: .98;
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+
+    .scene-copy p {
+      color: #c9bdce;
+      font-size: 19px;
+      line-height: 1.8;
+      max-width: 490px;
+    }
+
+    .scene-number {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 25px;
+      margin-bottom: 22px;
+    }
+
+    .scene-visual {
+      width: 100%;
+      min-height: 540px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+    }
+
+    .scene:nth-of-type(even) .scene-copy {
+      order: 2;
+    }
+
+    .scene:nth-of-type(even) .scene-visual {
+      order: 1;
+    }
+
+    /* SCENE 01 - BRAND IDENTITY */
+
+    .brand-board {
+      width: min(100%, 530px);
+      background: var(--ivory);
+      color: var(--aubergine);
+      padding: 30px;
+      box-shadow: 0 35px 100px rgba(0,0,0,.28);
+      transform: rotate(-3deg);
+      transition: transform .7s ease;
+    }
+
+    .scene.active .brand-board {
+      transform: rotate(0deg) translateY(-8px);
+    }
+
+    .board-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(33,19,41,.18);
+      padding-bottom: 15px;
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .board-logo {
+      padding: 35px 0 25px;
+      font-family: var(--serif);
+      font-size: 68px;
+      line-height: 1;
+      letter-spacing: .13em;
+      text-align: center;
+    }
+
+    .board-subtitle {
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .board-colors {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .swatch {
+      height: 75px;
+      display: flex;
+      align-items: flex-end;
+      padding: 7px;
+      font-size: 9px;
+      color: white;
+    }
+
+    .swatch:nth-child(1) { background: #211329; }
+    .swatch:nth-child(2) { background: #493052; }
+    .swatch:nth-child(3) { background: #b99a62; color: #211329; }
+    .swatch:nth-child(4) { background: #f4efe6; color: #211329; }
+
+    .board-type {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      border-top: 1px solid rgba(33,19,41,.18);
+      padding-top: 20px;
+    }
+
+    .board-type strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 33px;
+      font-weight: 400;
+    }
+
+    .board-type span {
+      font-size: 10px;
+      color: #776c79;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .board-bottom {
+      margin-top: 23px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #776c79;
+    }
+
+    /* SCENE 02 - POSITIONING */
+
+    .positioning-board {
+      width: min(100%, 540px);
+      padding: 25px;
+      background: rgba(244,239,230,.06);
+      border: 1px solid rgba(216,189,138,.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .positioning-title {
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .matrix {
+      position: relative;
+      height: 370px;
+      margin: 15px 25px 35px 35px;
+      border-left: 1px solid rgba(216,189,138,.7);
+      border-bottom: 1px solid rgba(216,189,138,.7);
+      background:
+        linear-gradient(to right, transparent 49.8%, rgba(216,189,138,.2) 50%, transparent 50.2%),
+        linear-gradient(to bottom, transparent 49.8%, rgba(216,189,138,.2) 50%, transparent 50.2%);
+    }
+
+    .matrix::before,
+    .matrix::after {
+      position: absolute;
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .matrix::before {
+      content: "Premium";
+      top: -22px;
+      left: 0;
+    }
+
+    .matrix::after {
+      content: "Accessible";
+      bottom: -26px;
+      left: 0;
+    }
+
+    .axis-x {
+      position: absolute;
+      right: 0;
+      bottom: -25px;
+      font-size: 10px;
+      letter-spacing: .12em;
+      color: var(--gold-light);
+      text-transform: uppercase;
+    }
+
+    .axis-y {
+      position: absolute;
+      left: -39px;
+      top: 50%;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg) translateY(50%);
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .matrix-point {
+      position: absolute;
+      padding: 8px 12px;
+      border: 1px solid rgba(216,189,138,.5);
+      background: #302038;
+      color: #e8deeb;
+      font-size: 12px;
+      opacity: .75;
+      transition: .5s ease;
+    }
+
+    .matrix-point.p1 { left: 13%; top: 18%; }
+    .matrix-point.p2 { right: 12%; top: 25%; }
+    .matrix-point.p3 { left: 18%; bottom: 16%; }
+    .matrix-point.p4 { right: 15%; bottom: 20%; }
+
+    .matrix-point.highlight {
+      background: var(--gold);
+      color: var(--deep);
+      border-color: var(--gold);
+      font-weight: 700;
+      opacity: 1;
+      transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(185,154,98,.25);
+    }
+
+    .matrix-caption {
+      color: #c9bdce;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* SCENE 03 - STRATEGY */
+
+    .strategy-board {
+      width: min(100%, 540px);
+      padding: 30px;
+      border: 1px solid rgba(216,189,138,.3);
+      background: rgba(244,239,230,.045);
+    }
+
+    .strategy-heading {
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .strategy-flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .strategy-node {
+      width: 85%;
+      min-height: 62px;
+      padding: 13px 17px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid rgba(216,189,138,.35);
+      background: #2b1b33;
+      color: #e9e0ec;
+      font-size: 15px;
+      transition: .5s ease;
+    }
+
+    .strategy-node span {
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: .1em;
+    }
+
+    .strategy-node.active {
+      background: var(--gold);
+      color: var(--deep);
+      border-color: var(--gold);
+      transform: scale(1.04);
+    }
+
+    .strategy-node.active span {
+      color: var(--deep);
+    }
+
+    .strategy-connector {
+      height: 27px;
+      width: 1px;
+      background: var(--gold);
+      position: relative;
+      opacity: .5;
+      overflow: hidden;
+    }
+
+    .strategy-connector::after {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 1px;
+      height: 12px;
+      background: white;
+      animation: flowDown 1.5s linear infinite;
+    }
+
+    @keyframes flowDown {
+      to { transform: translateY(40px); }
+    }
+
+    .strategy-footer {
+      margin-top: 25px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(216,189,138,.2);
+      color: #c9bdce;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* SCENE 04 - CONTENT STRATEGY */
+
+    .editorial-board {
+      width: min(100%, 560px);
+      background: var(--ivory);
+      color: var(--aubergine);
+      padding: 27px;
+      transform: rotate(2deg);
+      transition: transform .7s ease;
+      box-shadow: 0 35px 90px rgba(0,0,0,.25);
+    }
+
+    .scene.active .editorial-board {
+      transform: rotate(0deg);
+    }
+
+    .editorial-top {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(33,19,41,.2);
+      padding-bottom: 14px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .editorial-title {
+      font-family: var(--serif);
+      font-size: 43px;
+      line-height: 1;
+      padding: 25px 0;
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .content-card {
+      min-height: 130px;
+      padding: 17px;
+      background: #e8dfd4;
+      border-left: 3px solid var(--gold);
+      transition: .5s ease;
+      transform: translateY(18px);
+      opacity: .65;
+    }
+
+    .scene.active .content-card {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .content-card:nth-child(2) { transition-delay: .1s; }
+    .content-card:nth-child(3) { transition-delay: .2s; }
+    .content-card:nth-child(4) { transition-delay: .3s; }
+
+    .content-card strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .content-card span {
+      display: block;
+      font-size: 12px;
+      color: #685b6c;
+      line-height: 1.5;
+    }
+
+    .content-card small {
+      display: block;
+      margin-top: 13px;
+      font-size: 9px;
+      color: #92784c;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .editorial-bottom {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      color: #776c79;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    /* SCENE 05 - GROWTH */
+
+    .growth-board {
+      width: min(100%, 560px);
+      background: #f4efe6;
+      color: var(--aubergine);
+      padding: 30px;
+      box-shadow: 0 35px 90px rgba(0,0,0,.25);
+    }
+
+    .growth-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(33,19,41,.15);
+      padding-bottom: 18px;
+    }
+
+    .growth-top strong {
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .growth-top span {
+      font-size: 10px;
+      color: #796c7c;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .growth-chart {
+      height: 265px;
+      position: relative;
+      margin: 30px 0 20px;
+      border-bottom: 1px solid rgba(33,19,41,.3);
+      border-left: 1px solid rgba(33,19,41,.3);
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 64px,
+        rgba(33,19,41,.09) 65px
+      );
+    }
+
+    .growth-chart svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .growth-path {
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      transition: stroke-dashoffset 2s ease;
+    }
+
+    .scene.active .growth-path {
+      stroke-dashoffset: 0;
+    }
+
+    .growth-dot {
+      fill: var(--aubergine);
+      stroke: var(--gold);
+      stroke-width: 3;
+    }
+
+    .growth-bars {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+      align-items: end;
+      height: 100%;
+      padding: 0 12px;
+      position: absolute;
+      inset: 0;
+    }
+
+    .growth-bar-wrap {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 9px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .growth-bar {
+      width: 48%;
+      height: var(--bar-height);
+      background: rgba(73,48,82,.13);
+      border-top: 3px solid var(--gold);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 1s ease;
+    }
+
+    .scene.active .growth-bar {
+      transform: scaleY(1);
+    }
+
+    .growth-bar-wrap span {
+      position: absolute;
+      bottom: -28px;
+      font-size: 10px;
+      color: #685b6c;
+      text-align: center;
+    }
+
+    .growth-caption {
+      color: #776c79;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-top: 35px;
+    }
+
+    /* FUNNEL */
+
+    .funnel-section {
+      padding: 145px 9%;
+      background: var(--ivory);
+      color: var(--aubergine);
+    }
+
+    .funnel-section .eyebrow {
+      color: var(--plum);
+    }
+
+    .funnel-section .section-intro {
+      color: #66576b;
+      margin-top: 25px;
+    }
+
+    .funnel-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10%;
+      align-items: center;
+      margin-top: 75px;
+    }
+
+    .funnel-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .funnel-step {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 19px 22px;
+      border: 1px solid rgba(73,48,82,.18);
+      background: rgba(255,255,255,.38);
+      transition: .35s ease;
+    }
+
+    .funnel-step:hover {
+      transform: translateX(9px);
+      border-color: var(--gold);
+      background: white;
+    }
+
+    .funnel-step-number {
+      font-family: var(--serif);
+      font-size: 32px;
+      color: var(--gold);
+    }
+
+    .funnel-step strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .funnel-step span {
+      color: #75697a;
+      font-size: 13px;
+    }
+
+    .funnel-graphic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .funnel-layer {
+      width: var(--funnel-width);
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--aubergine);
+      color: var(--ivory);
+      font-family: var(--serif);
+      font-size: 27px;
+      letter-spacing: .04em;
+      opacity: .55;
+      transform: scaleX(.88);
+      transition: .6s ease;
+    }
+
+    .funnel-layer:nth-child(2) { background: #493052; }
+    .funnel-layer:nth-child(3) { background: #74577d; }
+    .funnel-layer:nth-child(4) { background: #b99a62; color: var(--deep); }
+
+    .funnel-graphic.visible .funnel-layer {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+
+    /* SERVICES */
+
+    .services {
+      padding: 145px 9%;
+      background: var(--deep);
+    }
+
+    .services-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 35px;
+      margin-bottom: 75px;
+    }
+
+    .services-header .section-intro {
+      max-width: 430px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .service-card {
+      min-height: 300px;
+      padding: 42px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      transition: background .4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      background: rgba(185,154,98,.08);
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      right: -50px;
+      bottom: -50px;
+      border: 1px solid rgba(185,154,98,.25);
+      border-radius: 50%;
+      transition: transform .5s ease;
+    }
+
+    .service-card:hover::after {
+      transform: scale(1.8);
+    }
+
+    .service-index {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 27px;
+    }
+
+    .service-card h3 {
+      font-family: var(--serif);
+      font-size: 43px;
+      font-weight: 400;
+      line-height: 1;
+      margin: 26px 0 17px;
+    }
+
+    .service-card p {
+      color: #c9bdce;
+      font-size: 17px;
+      max-width: 470px;
+      line-height: 1.8;
+    }
+
+    /* STATEMENT */
+
+    .statement {
+      padding: 155px 10%;
+      text-align: center;
+      background: #2b1b33;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .statement .eyebrow {
+      justify-content: center;
+    }
+
+    .statement h2 {
+      font-family: var(--serif);
+      font-size: clamp(53px, 8vw, 105px);
+      line-height: .98;
+      font-weight: 400;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .statement h2 em {
+      color: var(--gold-light);
+    }
+
+    .statement p {
+      max-width: 620px;
+      margin: 35px auto 0;
+      color: #d0c5d3;
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    /* PROCESS */
+
+    .process {
+      padding: 145px 9%;
+      background: var(--ivory);
+      color: var(--aubergine);
+    }
+
+    .process .eyebrow {
+      color: var(--plum);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 25px;
+      margin-top: 75px;
+    }
+
+    .process-item {
+      padding-top: 25px;
+      border-top: 1px solid rgba(73,48,82,.35);
+    }
+
+    .process-item span {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 35px;
+    }
+
+    .process-item h3 {
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 500;
+      margin: 18px 0 12px;
+    }
+
+    .process-item p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #685b6c;
+    }
+
+    /* AUDIT */
+
+    .audit {
+      padding: 140px 9%;
+      background: linear-gradient(120deg, #211329, #493052);
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 10%;
+    }
+
+    .audit h2 {
+      font-family: var(--serif);
+      font-size: clamp(55px, 7vw, 91px);
+      font-weight: 400;
+      line-height: .95;
+    }
+
+    .audit h2 em {
+      color: var(--gold-light);
+    }
+
+    .audit-copy {
+      color: #d4cbd7;
+      font-size: 19px;
+      line-height: 1.8;
+      margin: 28px 0 35px;
+      max-width: 650px;
+    }
+
+    .audit-panel {
+      border: 1px solid rgba(216,189,138,.5);
+      padding: 40px;
+      background: rgba(23,13,29,.35);
+    }
+
+    .audit-panel .small-label {
+      margin-bottom: 22px;
+      display: block;
+    }
+
+    .audit-panel h3 {
+      font-family: var(--serif);
+      font-size: 39px;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .audit-panel p {
+      color: #d0c5d3;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .audit-dimensions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 30px;
+    }
+
+    .audit-dimensions span {
+      padding: 8px 11px;
+      border: 1px solid rgba(216,189,138,.35);
+      color: var(--gold-light);
+      font-size: 12px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      padding: 145px 9%;
+      background: var(--ivory);
+      color: var(--aubergine);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10%;
+      align-items: start;
+    }
+
+    .contact .eyebrow {
+      color: var(--plum);
+    }
+
+    .contact-copy {
+      color: #66576b;
+      font-size: 19px;
+      line-height: 1.8;
+      margin-top: 30px;
+      max-width: 520px;
+    }
+
+    .contact-details {
+      border-top: 1px solid rgba(73,48,82,.25);
+      margin-top: 40px;
+      padding-top: 25px;
+    }
+
+    .contact-details span {
+      display: block;
+      color: #806f85;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      margin-bottom: 8px;
+    }
+
+    .contact-details a {
+      font-family: var(--serif);
+      font-size: 27px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card {
+      background: var(--aubergine);
+      color: var(--ivory);
+      padding: 43px;
+    }
+
+    .contact-card h3 {
+      font-family: var(--serif);
+      font-size: 43px;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .contact-card p {
+      color: #d0c5d3;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 65px 8%;
+      background: var(--ivory);
+      color: var(--aubergine);
+      border-top: 1px solid rgba(73,48,82,.15);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid rgba(73,48,82,.18);
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 48px;
+      letter-spacing: .13em;
+      line-height: 1;
+    }
+
+    .footer-tagline {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      margin-top: 9px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 25px;
+      color: #796c7c;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1000px) {
+      .header {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .nav {
+        gap: 20px;
+      }
+
+      .scene-sticky {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      .scene-visual {
+        min-height: 460px;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .hero-note {
+        display: none;
+      }
+    }
+
+    @media (max-width: 760px) {
+      html {
+        scroll-padding-top: 75px;
+      }
+
+      body {
+        font-size: 16px;
+      }
+
+      .header {
+        padding: 14px 6%;
+      }
+
+      .logo-main {
+        font-size: 30px;
+      }
+
+      .logo-sub {
+        font-size: 9px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 22px 7% 28px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--ivory);
+        border-top: 1px solid rgba(73,48,82,.12);
+        box-shadow: 0 20px 35px rgba(23,13,29,.12);
+      }
+
+      .nav.open {
+        display: flex;
+      }
+
+      .nav a {
+        padding: 13px 0;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(73,48,82,.12);
+      }
+
+      .nav .nav-cta {
+        margin-top: 15px;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .hero {
+        min-height: 100svh;
+        padding: 145px 7% 80px;
+      }
+
+      .hero h1 {
+        font-size: clamp(65px, 16vw, 100px);
+        line-height: .88;
+      }
+
+      .hero h1 span {
+        padding-left: 3%;
+      }
+
+      .hero-bottom {
+        margin-top: 40px;
+        display: block;
+      }
+
+      .hero-description {
+        font-size: 17px;
+        max-width: 100%;
+      }
+
+      .hero-actions {
+        margin-top: 28px;
+      }
+
+      .button {
+        min-height: 54px;
+        padding: 14px 18px;
+        font-size: 13px;
+      }
+
+      .intro {
+        padding: 95px 7%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .intro-copy {
+        font-size: 17px;
+      }
+
+      .experience-heading {
+        padding: 95px 7% 55px;
+      }
+
+      .section-title {
+        font-size: clamp(53px, 13vw, 75px);
+      }
+
+      .section-intro {
+        font-size: 17px;
+      }
+
+      .scene {
+        min-height: auto;
+        padding: 0;
+      }
+
+      .scene-sticky {
+        position: relative;
+        top: auto;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+        padding: 80px 7%;
+        overflow: visible;
+      }
+
+      .scene-copy {
+        order: 1 !important;
+        max-width: 100%;
+      }
+
+      .scene-copy h3 {
+        font-size: clamp(48px, 12vw, 67px);
+        margin-bottom: 20px;
+      }
+
+      .scene-copy p {
+        font-size: 17px;
+      }
+
+      .scene-visual {
+        order: 2 !important;
+        min-height: auto;
+        padding: 15px 0 25px;
+      }
+
+      .brand-board,
+      .editorial-board,
+      .growth-board,
+      .positioning-board,
+      .strategy-board {
+        width: 100%;
+        max-width: 520px;
+      }
+
+      .brand-board {
+        padding: 20px;
+      }
+
+      .board-logo {
+        font-size: clamp(45px, 12vw, 62px);
+      }
+
+      .swatch {
+        height: 58px;
+        font-size: 8px;
+      }
+
+      .board-type strong {
+        font-size: 27px;
+      }
+
+      .matrix {
+        height: 300px;
+        margin-right: 10px;
+      }
+
+      .matrix-point {
+        font-size: 10px;
+        padding: 7px 8px;
+      }
+
+      .strategy-board {
+        padding: 20px 13px;
+      }
+
+      .strategy-node {
+        width: 94%;
+        font-size: 13px;
+        min-height: 57px;
+      }
+
+      .editorial-board {
+        padding: 20px;
+      }
+
+      .editorial-title {
+        font-size: 35px;
+      }
+
+      .content-card {
+        min-height: 125px;
+        padding: 13px;
+      }
+
+      .content-card strong {
+        font-size: 13px;
+      }
+
+      .content-card span {
+        font-size: 11px;
+      }
+
+      .growth-board {
+        padding: 20px;
+      }
+
+      .growth-chart {
+        height: 220px;
+      }
+
+      .funnel-section,
+      .services,
+      .process,
+      .contact {
+        padding: 95px 7%;
+      }
+
+      .funnel-layout {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        margin-top: 50px;
+      }
+
+      .funnel-step {
+        padding: 15px;
+      }
+
+      .funnel-step strong {
+        font-size: 16px;
+      }
+
+      .funnel-layer {
+        height: 58px;
+        font-size: 23px;
+      }
+
+      .services-header {
+        display: block;
+        margin-bottom: 45px;
+      }
+
+      .services-header .section-intro {
+        margin-top: 25px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: 240px;
+        padding: 30px 25px;
+      }
+
+      .service-card h3 {
+        font-size: 37px;
+      }
+
+      .service-card p {
+        font-size: 16px;
+      }
+
+      .statement {
+        padding: 100px 7%;
+      }
+
+      .statement h2 {
+        font-size: clamp(49px, 12vw, 75px);
+      }
+
+      .statement p {
+        font-size: 17px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 20px;
+        margin-top: 50px;
+      }
+
+      .process-item h3 {
+        font-size: 28px;
+      }
+
+      .process-item p {
+        font-size: 14px;
+      }
+
+      .audit {
+        padding: 95px 7%;
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .audit-panel {
+        padding: 27px;
+      }
+
+      .audit-panel h3 {
+        font-size: 34px;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .contact-card {
+        padding: 30px;
+      }
+
+      .contact-card h3 {
+        font-size: 37px;
+      }
+
+      .contact-details a {
+        font-size: 23px;
+      }
+
+      footer {
+        padding: 50px 7% 30px;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-links {
+        gap: 15px 22px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 62px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .editorial-grid {
+        gap: 7px;
+      }
+
+      .content-card {
+        min-height: 140px;
+      }
+
+      .board-colors {
+        gap: 5px;
+      }
+
+      .swatch {
+        padding: 4px;
+        font-size: 7px;
+      }
+
+      .growth-bar-wrap span {
+        font-size: 8px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      .growth-path {
+        stroke-dashoffset: 0;
+      }
+
+      .growth-bar {
+        transform: scaleY(1);
+      }
+
+      .strategy-connector::after {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div id="progress"></div>
-<div class="noise"></div>
 
-<header id="header">
-  <nav class="nav">
-    <a href="#home" class="logo" aria-label="ARVANA homepage">
-      <span class="logo-symbol"></span>
-      <span class="logo-text">ARVANA<small>DIGITAL MARKETING</small></span>
+  <div class="progress" id="progress"></div>
+
+  <header class="header" id="header">
+    <a href="#home" class="logo" aria-label="ARVANA Digital Marketing">
+      <span class="logo-main">ARVANA</span>
+      <span class="logo-sub">Digital Marketing</span>
     </a>
 
-    <div class="nav-links" id="navLinks">
+    <button class="menu-toggle" id="menuToggle" aria-label="Deschide meniul" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="nav">
       <a href="#about">Despre</a>
+      <a href="#expertise">Expertiză</a>
       <a href="#services">Servicii</a>
       <a href="#process">Proces</a>
       <a href="#audit">Audit gratuit</a>
-      <a href="#contact" class="nav-cta">Contact ↗</a>
-    </div>
+      <a href="#contact" class="nav-cta">Discutăm despre brandul tău</a>
+    </nav>
+  </header>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Deschide meniul">☰</button>
-  </nav>
-</header>
+  <main>
 
-<main>
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <div class="eyebrow">Strategic Marketing & Brand Development</div>
-      <h1>
-        <span>Brand</span>
-        <span class="indent serif gold">with</span>
-        <span>purpose.</span>
-      </h1>
-      <p class="hero-description">
-        Construiesc direcții strategice pentru branduri care vor să fie mai mult decât vizibile. Claritate în poziționare. Coerență în comunicare. Marketing cu sens.
-      </p>
-      <a href="#about" class="btn">Descoperă ARVANA <span>↗</span></a>
-      <div class="hero-meta"><i></i> Direcție clară. Branduri cu valoare.</div>
-    </div>
+    <!-- HERO -->
 
-    <div class="hero-visual" data-parallax>
-      <div class="orbit"></div>
-      <div class="hero-gem"></div>
-      <div class="hero-side-note">STRATEGY · IDENTITY · GROWTH</div>
-    </div>
-  </div>
-  <div class="hero-scroll">Scroll to explore</div>
-</section>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow reveal">Strategic Marketing & Brand Development</div>
 
-<!-- INTRO -->
-<section class="intro" id="about">
-  <div class="container">
-    <div class="intro-top">
-      <span class="section-label">01 — Philosophy</span>
-      <span class="section-label">ARVANA / 2026</span>
-    </div>
+        <h1 class="reveal">
+          Brand with
+          <span>purpose.</span>
+        </h1>
 
-    <h2 class="intro-title reveal">
-      Marketingul nu începe cu
-      <span class="line2 gold serif">mai mult conținut.</span>
-      Începe cu o direcție.
-    </h2>
-
-    <div class="intro-bottom">
-      <p>
-        Un brand puternic nu se construiește prin acțiuni izolate. Se construiește prin decizii conectate, o identitate clară și o strategie care susține obiectivele businessului.
-      </p>
-      <div class="intro-number">01.</div>
-    </div>
-  </div>
-</section>
-
-<!-- SCROLL EXPERIENCE -->
-<div class="experience">
-
-  <!-- SCENE 1 -->
-  <section class="scene" data-scene="0">
-    <div class="scene-pin">
-      <div class="scene-inner">
-        <div class="scene-copy left">
-          <div class="eyebrow">02 — Brand identity</div>
-          <h2>Un brand<br><span class="gold serif">cu sens.</span></h2>
-          <p>
-            Identitatea unui brand înseamnă mai mult decât un logo. Este felul în care este perceput, recunoscut și diferențiat. Construiesc direcții de identitate care reflectă esența și valoarea businessului.
+        <div class="hero-bottom reveal">
+          <p class="hero-description">
+            Construiesc direcții de brand și strategii de marketing care transformă ideile în identități clare, comunicare coerentă și dezvoltare cu sens.
           </p>
-        </div>
-        <div class="scene-visual left">
-          <div class="brand-sculpture" data-object="sculpture">
-            <div class="sculpture-ring"></div>
-            <div class="sculpture-ring r2"></div>
-            <div class="sculpture-ring r3"></div>
-            <div class="sculpture-core"></div>
+
+          <div class="hero-actions">
+            <a href="#services" class="button button-primary">Descoperă serviciile</a>
+            <a href="#audit" class="button button-outline">Analizează-ți brandul</a>
           </div>
         </div>
-        <div class="scene-index">01 / 05</div>
-        <div class="visual-caption">Identity is more than appearance</div>
       </div>
-    </div>
-  </section>
 
-  <!-- SCENE 2 -->
-  <section class="scene light" data-scene="1">
-    <div class="scene-pin">
-      <div class="scene-inner">
-        <div class="scene-copy right">
-          <div class="eyebrow">03 — Brand positioning</div>
-          <h2>Locul pe<br>care îl <span class="gold serif">ocupi.</span></h2>
+      <div class="hero-note">Direcție clară. Branduri cu valoare.</div>
+    </section>
+
+    <!-- INTRO -->
+
+    <section class="intro" id="about">
+      <div class="reveal">
+        <div class="eyebrow">Despre ARVANA</div>
+        <h2 class="section-title">
+          Marketingul începe cu <em>direcția.</em>
+        </h2>
+      </div>
+
+      <div class="intro-copy reveal">
+        <p>
+          Un brand puternic nu se construiește doar printr-un logo, postări constante sau prezență online. Se construiește prin decizii strategice, diferențiere și o comunicare care transmite aceeași valoare în fiecare punct de contact.
+        </p>
+        <p>
+          Prin ARVANA, analizez, structurez și dezvolt direcții de brand și marketing adaptate obiectivelor fiecărui business.
+        </p>
+        <p>
+          Abordarea mea îmbină strategia, identitatea, poziționarea și comunicarea într-un sistem coerent, orientat spre dezvoltare.
+        </p>
+        <div class="intro-signature">Strategie înainte de execuție.</div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE INTRO -->
+
+    <section class="experience-heading" id="expertise">
+      <div class="eyebrow reveal">Dincolo de vizibilitate</div>
+      <h2 class="section-title reveal">
+        Fiecare brand are nevoie de un <em>sistem.</em>
+      </h2>
+      <p class="section-intro reveal">
+        De la identitate și poziționare până la strategie, conținut și creștere, fiecare componentă trebuie să aibă un rol clar.
+      </p>
+    </section>
+
+    <!-- SCENE 01 -->
+
+    <section class="scene" data-scene="1">
+      <div class="scene-sticky">
+        <div class="scene-copy">
+          <div class="scene-number">01 / Identitate</div>
+          <div class="eyebrow">Brand identity</div>
+          <h3>Un brand care știe <em class="gold">cine este.</em></h3>
           <p>
-            Poziționarea clarifică cine ești, cui te adresezi și de ce ar trebui să fii ales. Identific diferențiatorii relevanți și transform direcția brandului într-un mesaj coerent.
+            Identitatea unui brand înseamnă mai mult decât aspectul vizual. Înseamnă personalitate, valori, ton de comunicare și un sistem vizual consecvent, ușor de recunoscut.
           </p>
         </div>
-        <div class="scene-visual right">
-          <div class="position-graphic" data-object="position">
-            <div class="position-circle"></div>
-            <div class="position-circle"></div>
-            <div class="position-circle"></div>
-            <div class="position-circle"></div>
-            <div class="position-dot"></div>
-            <span class="position-text t1">Distinct</span>
-            <span class="position-text t2">Relevant</span>
-            <span class="position-text t3">Memorable</span>
-          </div>
-        </div>
-        <div class="scene-index">02 / 05</div>
-        <div class="visual-caption">Find your position</div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SCENE 3 -->
-  <section class="scene" data-scene="2">
-    <div class="scene-pin">
-      <div class="scene-inner">
-        <div class="scene-copy center">
-          <div class="eyebrow" style="justify-content:center">04 — Marketing strategy</div>
-          <h2>Totul este<br><span class="gold serif">conectat.</span></h2>
-          <p>
-            Strategia conectează obiectivele, publicul, mesajele și canalele într-un sistem coerent. Fiecare acțiune trebuie să aibă un rol și o direcție.
-          </p>
-        </div>
         <div class="scene-visual">
-          <div class="network" data-object="network">
-            <svg viewBox="0 0 600 600" role="img" aria-label="Rețea strategică">
-              <g>
-                <line x1="300" y1="300" x2="300" y2="65"/>
-                <line x1="300" y1="300" x2="510" y2="180"/>
-                <line x1="300" y1="300" x2="520" y2="430"/>
-                <line x1="300" y1="300" x2="300" y2="540"/>
-                <line x1="300" y1="300" x2="80" y2="430"/>
-                <line x1="300" y1="300" x2="80" y2="180"/>
-                <line x1="300" y1="65" x2="510" y2="180"/>
-                <line x1="510" y1="180" x2="520" y2="430"/>
-                <line x1="520" y1="430" x2="300" y2="540"/>
-                <line x1="300" y1="540" x2="80" y2="430"/>
-                <line x1="80" y1="430" x2="80" y2="180"/>
-                <line x1="80" y1="180" x2="300" y2="65"/>
-              </g>
-              <g>
-                <circle class="main-node" cx="300" cy="300" r="43"/>
-                <circle class="pulse" cx="300" cy="65" r="11"/>
-                <circle cx="510" cy="180" r="10"/>
-                <circle class="pulse" cx="520" cy="430" r="12"/>
-                <circle cx="300" cy="540" r="10"/>
-                <circle class="pulse" cx="80" cy="430" r="11"/>
-                <circle cx="80" cy="180" r="10"/>
-              </g>
-            </svg>
+          <div class="brand-board">
+            <div class="board-top">
+              <span>Brand identity system</span>
+              <span>01 — 05</span>
+            </div>
+
+            <div class="board-logo">ARVANA</div>
+            <div class="board-subtitle">Strategic Marketing & Brand Development</div>
+
+            <div class="board-colors">
+              <div class="swatch">#211329</div>
+              <div class="swatch">#493052</div>
+              <div class="swatch">#B99A62</div>
+              <div class="swatch">#F4EFE6</div>
+            </div>
+
+            <div class="board-type">
+              <div>
+                <strong>Aa</strong>
+                <span>Editorial typography</span>
+              </div>
+              <div>
+                <strong style="font-family:var(--sans);font-size:25px;">Aa</strong>
+                <span>Digital typography</span>
+              </div>
+            </div>
+
+            <div class="board-bottom">
+              <span>Visual language</span>
+              <span>Consistency / Recognition</span>
+            </div>
           </div>
         </div>
-        <div class="scene-index">03 / 05</div>
-        <div class="visual-caption">One direction. Connected decisions.</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SCENE 4 -->
-  <section class="scene light" data-scene="3">
-    <div class="scene-pin">
-      <div class="scene-inner">
-        <div class="scene-copy right">
-          <div class="eyebrow">05 — Content strategy</div>
-          <h2>Mesaje care<br><span class="gold serif">construiesc.</span></h2>
+    <!-- SCENE 02 -->
+
+    <section class="scene" data-scene="2">
+      <div class="scene-sticky">
+        <div class="scene-copy">
+          <div class="scene-number">02 / Poziționare</div>
+          <div class="eyebrow">Brand positioning</div>
+          <h3>Un loc clar în <em class="gold">mintea publicului.</em></h3>
           <p>
-            Conținutul trebuie să transmită valoare, să susțină poziționarea și să creeze încredere. Construiesc direcții editoriale în care fiecare mesaj contribuie la imaginea de ansamblu.
+            Poziționarea stabilește ce diferențiază un brand, cui se adresează și de ce ar trebui ales. O strategie bună nu încearcă să vorbească tuturor, ci construiește relevanță pentru publicul potrivit.
           </p>
         </div>
-        <div class="scene-visual left">
-          <div class="content-panels" data-object="panels">
-            <div class="content-panel">
-              <span class="panel-no">01</span>
-              <span class="panel-title">Meaning<br>before<br>message.</span>
-              <div class="panel-lines"><span></span><span></span><span></span></div>
+
+        <div class="scene-visual">
+          <div class="positioning-board">
+            <div class="positioning-title">Illustrative positioning map</div>
+
+            <div class="matrix">
+              <span class="axis-y">Specialist</span>
+              <span class="axis-x">Diferențiere</span>
+
+              <div class="matrix-point p1">Premium generalist</div>
+              <div class="matrix-point p2">Specialist</div>
+              <div class="matrix-point p3">Generalist</div>
+              <div class="matrix-point p4 highlight">Brand distinct</div>
             </div>
-            <div class="content-panel">
-              <span class="panel-no">02</span>
-              <span class="panel-title">Content<br>with<br>direction.</span>
-              <div class="panel-lines"><span></span><span></span><span></span></div>
+
+            <div class="matrix-caption">
+              Hartă conceptuală de poziționare. Pozițiile sunt ilustrative, nu reprezintă date despre competitori sau performanțe reale.
             </div>
           </div>
         </div>
-        <div class="scene-index">04 / 05</div>
-        <div class="visual-caption">Consistency creates recognition</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SCENE 5 -->
-  <section class="scene" data-scene="4">
-    <div class="scene-pin">
-      <div class="scene-inner">
-        <div class="scene-copy left">
-          <div class="eyebrow">06 — Growth & optimization</div>
-          <h2>Creștere cu<br><span class="gold serif">direcție.</span></h2>
+    <!-- SCENE 03 -->
+
+    <section class="scene" data-scene="3">
+      <div class="scene-sticky">
+        <div class="scene-copy">
+          <div class="scene-number">03 / Strategie</div>
+          <div class="eyebrow">Marketing strategy</div>
+          <h3>Decizii conectate. <em class="gold">Direcție coerentă.</em></h3>
           <p>
-            Marketingul trebuie analizat și optimizat continuu. Urmăresc coerența dintre strategie, comunicare și rezultate pentru a identifica oportunități și următorii pași relevanți.
+            Strategia conectează obiectivele businessului cu publicul, poziționarea, canalele și indicatorii de performanță. Fiecare acțiune trebuie să contribuie la un obiectiv, nu doar să ocupe spațiu în calendar.
           </p>
         </div>
-        <div class="scene-visual left">
-          <div class="growth-graphic" data-object="growth">
-            <svg viewBox="0 0 620 330">
-              <line class="axis" x1="20" y1="290" x2="600" y2="290"/>
-              <line class="axis" x1="20" y1="20" x2="20" y2="290"/>
-              <path id="growthPath" d="M25 260 C100 250 110 210 180 220 S270 160 330 170 S430 100 470 115 S550 30 600 35"/>
-            </svg>
-            <div class="growth-bars">
-              <span style="--h:25%"></span>
-              <span style="--h:35%"></span>
-              <span style="--h:43%"></span>
-              <span style="--h:55%"></span>
-              <span style="--h:68%"></span>
-              <span style="--h:80%"></span>
-              <span style="--h:100%"></span>
+
+        <div class="scene-visual">
+          <div class="strategy-board">
+            <div class="strategy-heading">Strategic marketing framework</div>
+
+            <div class="strategy-flow">
+              <div class="strategy-node active">
+                <strong>Business objectives</strong>
+                <span>01</span>
+              </div>
+              <div class="strategy-connector"></div>
+              <div class="strategy-node">
+                <strong>Target audience</strong>
+                <span>02</span>
+              </div>
+              <div class="strategy-connector"></div>
+              <div class="strategy-node">
+                <strong>Brand positioning</strong>
+                <span>03</span>
+              </div>
+              <div class="strategy-connector"></div>
+              <div class="strategy-node">
+                <strong>Marketing channels</strong>
+                <span>04</span>
+              </div>
+              <div class="strategy-connector"></div>
+              <div class="strategy-node">
+                <strong>KPIs & optimization</strong>
+                <span>05</span>
+              </div>
+            </div>
+
+            <div class="strategy-footer">
+              Obiective → Public → Poziționare → Canale → Evaluare
             </div>
           </div>
         </div>
-        <div class="scene-index">05 / 05</div>
-        <div class="visual-caption">Progress with purpose</div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
 
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="container">
-    <div class="services-header reveal">
-      <div>
-        <div class="section-label">07 — What I do</div>
-        <h2>Strategic<br><span class="serif gold">services.</span></h2>
+    <!-- SCENE 04 -->
+
+    <section class="scene" data-scene="4">
+      <div class="scene-sticky">
+        <div class="scene-copy">
+          <div class="scene-number">04 / Conținut</div>
+          <div class="eyebrow">Content strategy</div>
+          <h3>Conținut cu un <em class="gold">rol bine definit.</em></h3>
+          <p>
+            Conținutul eficient nu înseamnă doar frecvență. Construiesc direcții editoriale care educă, consolidează autoritatea, dezvoltă încrederea și susțin decizia de cumpărare.
+          </p>
+        </div>
+
+        <div class="scene-visual">
+          <div class="editorial-board">
+            <div class="editorial-top">
+              <span>Editorial strategy</span>
+              <span>Content pillars</span>
+            </div>
+
+            <div class="editorial-title">Content with intention.</div>
+
+            <div class="editorial-grid">
+              <div class="content-card">
+                <strong>Educație</strong>
+                <span>Explic concepte, ofer claritate și răspund întrebărilor publicului.</span>
+                <small>Inform / Educate</small>
+              </div>
+
+              <div class="content-card">
+                <strong>Autoritate</strong>
+                <span>Transmit expertiză, perspectivă și diferențiere.</span>
+                <small>Position / Lead</small>
+              </div>
+
+              <div class="content-card">
+                <strong>Încredere</strong>
+                <span>Construiesc relații prin transparență și consecvență.</span>
+                <small>Connect / Trust</small>
+              </div>
+
+              <div class="content-card">
+                <strong>Conversie</strong>
+                <span>Transform interesul în pași concreți și conversații relevante.</span>
+                <small>Activate / Convert</small>
+              </div>
+            </div>
+
+            <div class="editorial-bottom">
+              <span>Strategic content system</span>
+              <span>Purpose before frequency</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <p>
-        Nu pornesc de la tactici izolate. Analizez contextul și construiesc direcția potrivită pentru brand și business.
-      </p>
-    </div>
+    </section>
 
-    <div class="service-list">
-      <a href="#contact" class="service-item reveal">
-        <span class="number">01</span>
-        <div><h3>Brand Strategy & Positioning</h3><p>Identitate · Diferențiere · Poziționare · Valori</p></div>
-        <span class="arrow">↗</span>
-      </a>
-      <a href="#contact" class="service-item reveal">
-        <span class="number">02</span>
-        <div><h3>Marketing Strategy</h3><p>Obiective · Direcție · Canale · Planificare</p></div>
-        <span class="arrow">↗</span>
-      </a>
-      <a href="#contact" class="service-item reveal">
-        <span class="number">03</span>
-        <div><h3>Content Strategy</h3><p>Pilonii de conținut · Mesaje · Direcție editorială</p></div>
-        <span class="arrow">↗</span>
-      </a>
-      <a href="#contact" class="service-item reveal">
-        <span class="number">04</span>
-        <div><h3>Brand Communication</h3><p>Voce · Ton · Mesaje · Coerență</p></div>
-        <span class="arrow">↗</span>
-      </a>
-      <a href="#contact" class="service-item reveal">
-        <span class="number">05</span>
-        <div><h3>Digital Presence</h3><p>Prezență digitală · Experiență · Coerență vizuală</p></div>
-        <span class="arrow">↗</span>
-      </a>
-      <a href="#contact" class="service-item reveal">
-        <span class="number">06</span>
-        <div><h3>Analysis & Optimization</h3><p>Evaluare · Oportunități · Optimizare strategică</p></div>
-        <span class="arrow">↗</span>
-      </a>
-    </div>
-  </div>
-</section>
+    <!-- SCENE 05 -->
 
-<!-- STATEMENT -->
-<section class="statement">
-  <div class="statement-inner reveal">
-    <div class="eyebrow" style="justify-content:center">The ARVANA perspective</div>
-    <h2>Clarity is a<br><span class="gold serif">competitive</span><br>advantage.</h2>
-    <p>
-      Când știi cine ești, ce oferi și cui te adresezi, fiecare decizie de marketing devine mai coerentă.
-    </p>
-  </div>
-</section>
+    <section class="scene" data-scene="5">
+      <div class="scene-sticky">
+        <div class="scene-copy">
+          <div class="scene-number">05 / Creștere</div>
+          <div class="eyebrow">Growth with direction</div>
+          <h3>Creștere cu <em class="gold">direcție.</em></h3>
+          <p>
+            Vizibilitatea este doar începutul. Analizez indicatorii relevanți, urmăresc comportamentul publicului și identific oportunități de optimizare pentru ca marketingul să susțină obiectivele businessului.
+          </p>
+        </div>
 
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="container">
-    <div class="process-heading reveal">
-      <div>
-        <div class="section-label">08 — How I work</div>
-        <h2>From insight<br>to <span class="gold serif">direction.</span></h2>
+        <div class="scene-visual">
+          <div class="growth-board">
+            <div class="growth-top">
+              <strong>Growth framework</strong>
+              <span>Illustrative visualization</span>
+            </div>
+
+            <div class="growth-chart">
+              <div class="growth-bars">
+                <div class="growth-bar-wrap">
+                  <div class="growth-bar" style="--bar-height:34%"></div>
+                  <span>Vizibilitate</span>
+                </div>
+                <div class="growth-bar-wrap">
+                  <div class="growth-bar" style="--bar-height:52%"></div>
+                  <span>Interacțiuni</span>
+                </div>
+                <div class="growth-bar-wrap">
+                  <div class="growth-bar" style="--bar-height:70%"></div>
+                  <span>Lead-uri</span>
+                </div>
+                <div class="growth-bar-wrap">
+                  <div class="growth-bar" style="--bar-height:88%"></div>
+                  <span>Conversii</span>
+                </div>
+              </div>
+
+              <svg viewBox="0 0 500 260" preserveAspectRatio="none" aria-hidden="true">
+                <path class="growth-path" d="M10 215 C75 205 80 170 145 175 S220 130 280 135 S365 70 490 25"/>
+                <circle class="growth-dot" cx="10" cy="215" r="5"/>
+                <circle class="growth-dot" cx="145" cy="175" r="5"/>
+                <circle class="growth-dot" cx="280" cy="135" r="5"/>
+                <circle class="growth-dot" cx="490" cy="25" r="5"/>
+              </svg>
+            </div>
+
+            <div class="growth-caption">
+              Reprezentare conceptuală a etapelor și indicatorilor care pot fi urmăriți într-o strategie de marketing. Nu reprezintă rezultate sau date de performanță reale.
+            </div>
+          </div>
+        </div>
       </div>
-      <p>
-        Un proces strategic începe prin înțelegere și se dezvoltă prin decizii clare, adaptate contextului fiecărui business.
-      </p>
-    </div>
+    </section>
 
-    <div class="process-grid">
-      <article class="process-card reveal">
-        <span class="num">01</span>
-        <h3>Discover</h3>
-        <p>Analizez businessul, contextul, publicul și obiectivele pentru a înțelege punctul de plecare.</p>
-      </article>
-      <article class="process-card reveal">
-        <span class="num">02</span>
-        <h3>Define</h3>
-        <p>Clarific poziționarea, diferențiatorii și direcția strategică a brandului.</p>
-      </article>
-      <article class="process-card reveal">
-        <span class="num">03</span>
-        <h3>Develop</h3>
-        <p>Construiesc strategia, mesajele și direcțiile de comunicare potrivite.</p>
-      </article>
-      <article class="process-card reveal">
-        <span class="num">04</span>
-        <h3>Optimize</h3>
-        <p>Evaluez, identific oportunități și ajustez direcția în funcție de evoluție.</p>
-      </article>
-    </div>
-  </div>
-</section>
+    <!-- FUNNEL -->
 
-<!-- AUDIT -->
-<section class="audit" id="audit">
-  <div class="container audit-grid">
-    <div class="audit-visual" data-parallax>
-      <div class="audit-ring"></div>
-      <div class="audit-orb"></div>
-    </div>
-    <div class="audit-copy reveal">
-      <div class="eyebrow">09 — Start with clarity</div>
-      <h2>Understand<br>your <span class="gold serif">brand.</span></h2>
-      <p>
-        Înainte să investești în mai mult marketing, merită să înțelegi unde se află brandul tău acum. Am creat un instrument gratuit de autoevaluare care te ajută să identifici zonele ce merită atenție.
+    <section class="funnel-section">
+      <div class="eyebrow reveal">Marketing funnel</div>
+      <h2 class="section-title reveal">De la atenție la <em>acțiune.</em></h2>
+      <p class="section-intro reveal">
+        Un sistem de marketing trebuie să însoțească publicul în fiecare etapă a relației cu brandul, de la prima interacțiune până la decizie.
       </p>
-      <div class="audit-points">
-        <span>Brand positioning</span>
-        <span>Brand identity</span>
-        <span>Communication</span>
-        <span>Content strategy</span>
-        <span>Marketing strategy</span>
+
+      <div class="funnel-layout">
+        <div class="funnel-steps reveal">
+          <div class="funnel-step">
+            <div class="funnel-step-number">01</div>
+            <div>
+              <strong>Awareness — Vizibilitate</strong>
+              <span>Brandul este descoperit de publicul potrivit.</span>
+            </div>
+          </div>
+
+          <div class="funnel-step">
+            <div class="funnel-step-number">02</div>
+            <div>
+              <strong>Interest — Interes</strong>
+              <span>Mesajul stârnește curiozitate și relevanță.</span>
+            </div>
+          </div>
+
+          <div class="funnel-step">
+            <div class="funnel-step-number">03</div>
+            <div>
+              <strong>Trust — Încredere</strong>
+              <span>Publicul înțelege valoarea și diferențierea.</span>
+            </div>
+          </div>
+
+          <div class="funnel-step">
+            <div class="funnel-step-number">04</div>
+            <div>
+              <strong>Conversion — Conversie</strong>
+              <span>Interesul se transformă într-o acțiune concretă.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="funnel-graphic reveal" id="funnelGraphic">
+          <div class="funnel-layer" style="--funnel-width:100%">Awareness</div>
+          <div class="funnel-layer" style="--funnel-width:82%">Interest</div>
+          <div class="funnel-layer" style="--funnel-width:64%">Trust</div>
+          <div class="funnel-layer" style="--funnel-width:46%">Conversion</div>
+        </div>
       </div>
-      <a href="https://marianapastean.github.io/arvana-brand-marketing-audit/" target="_blank" rel="noopener" class="btn">
-        Începe auditul gratuit <span>↗</span>
-      </a>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-top reveal">
-      <h2>Let's create<br><span class="gold serif">direction.</span></h2>
-      <p class="contact-note">
-        Fiecare colaborare începe cu o conversație. Spune-mi unde se află businessul tău și ce îți dorești să construiești.
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+      <div class="services-header reveal">
+        <div>
+          <div class="eyebrow">Expertiză & servicii</div>
+          <h2 class="section-title">Ce construiesc<br><em>împreună cu tine.</em></h2>
+        </div>
+
+        <p class="section-intro">
+          Fiecare business are provocări diferite. De aceea, încep cu analiza și construiesc o direcție adaptată obiectivelor sale.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <div class="service-index">01</div>
+          <h3>Brand Strategy</h3>
+          <p>
+            Clarific identitatea, valorile, personalitatea și direcția strategică a brandului pentru o prezență coerentă și diferențiată.
+          </p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-index">02</div>
+          <h3>Brand Positioning</h3>
+          <p>
+            Definesc publicul, avantajele competitive, propunerea de valoare și locul pe care brandul îl poate ocupa în piață.
+          </p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-index">03</div>
+          <h3>Marketing Strategy</h3>
+          <p>
+            Structurez obiectivele, prioritățile, canalele și direcțiile de acțiune într-un plan de marketing coerent.
+          </p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-index">04</div>
+          <h3>Content Strategy</h3>
+          <p>
+            Construiesc piloni de conținut, direcții editoriale, mesaje și structuri de comunicare conectate la obiectivele brandului.
+          </p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-index">05</div>
+          <h3>Digital Presence</h3>
+          <p>
+            Ghidez dezvoltarea prezenței digitale astfel încât website-ul, conținutul și canalele online să transmită aceeași direcție.
+          </p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-index">06</div>
+          <h3>Analysis & Optimization</h3>
+          <p>
+            Analizez comunicarea și activitățile de marketing, identific oportunități și formulez recomandări pentru optimizare.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- STATEMENT -->
+
+    <section class="statement">
+      <div class="eyebrow reveal">ARVANA perspective</div>
+      <h2 class="reveal">
+        Nu ai nevoie doar de mai mult marketing. Ai nevoie de <em>marketing cu direcție.</em>
+      </h2>
+      <p class="reveal">
+        Mai mult conținut nu înseamnă automat mai multă valoare. Diferența o fac claritatea strategiei, relevanța mesajului și consecvența acțiunilor.
       </p>
-    </div>
+    </section>
 
-    <div class="contact-bottom">
-      <div>
-        <div class="section-label">Start a conversation</div>
-        <a class="contact-email" href="mailto:marianapastean.studio@gmail.com">
-          marianapastean.studio@gmail.com
+    <!-- PROCESS -->
+
+    <section class="process" id="process">
+      <div class="eyebrow reveal">Cum lucrez</div>
+      <h2 class="section-title reveal">De la analiză la <em>direcție.</em></h2>
+      <p class="section-intro reveal" style="color:#66576b;margin-top:25px;">
+        O abordare structurată, în care fiecare etapă pornește de la o înțelegere clară a businessului și a obiectivelor sale.
+      </p>
+
+      <div class="process-grid">
+        <div class="process-item reveal">
+          <span>01</span>
+          <h3>Analiză</h3>
+          <p>Înțeleg businessul, contextul, publicul, comunicarea actuală și provocările existente.</p>
+        </div>
+
+        <div class="process-item reveal">
+          <span>02</span>
+          <h3>Clarificare</h3>
+          <p>Identific prioritățile, diferențiatorii și oportunitățile de dezvoltare.</p>
+        </div>
+
+        <div class="process-item reveal">
+          <span>03</span>
+          <h3>Strategie</h3>
+          <p>Construiesc direcția de brand și marketing, cu obiective și acțiuni bine definite.</p>
+        </div>
+
+        <div class="process-item reveal">
+          <span>04</span>
+          <h3>Optimizare</h3>
+          <p>Evaluez evoluția, urmăresc indicatorii relevanți și identific următorii pași.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREE AUDIT -->
+
+    <section class="audit" id="audit">
+      <div class="reveal">
+        <div class="eyebrow">Primul pas</div>
+        <h2>Înțelege unde se află <em>brandul tău.</em></h2>
+
+        <p class="audit-copy">
+          Am creat un instrument gratuit de autoevaluare care te ajută să privești mai clar direcția brandului și activitățile de marketing.
+        </p>
+
+        <a href="https://marianapastean.github.io/arvana-brand-marketing-audit/" target="_blank" rel="noopener" class="button button-primary">
+          Începe evaluarea gratuită
         </a>
       </div>
-      <a href="mailto:marianapastean.studio@gmail.com" class="btn btn-dark">
-        Contactează-mă <span>↗</span>
-      </a>
-    </div>
-  </div>
-</section>
-</main>
 
-<footer>
-  <div class="container">
-    <div class="footer-line"></div>
-    <div class="footer-inner">
-      <a href="#home" class="footer-brand">
-        ARVANA
-        <small>DIGITAL MARKETING</small>
-      </a>
+      <div class="audit-panel reveal">
+        <span class="small-label">ARVANA Brand & Marketing Audit</span>
+        <h3>15 întrebări. 5 dimensiuni. Mai multă claritate.</h3>
+        <p>
+          Un instrument orientativ de autoevaluare care te ajută să identifici zonele ce merită analizate mai atent.
+        </p>
+
+        <div class="audit-dimensions">
+          <span>Poziționare</span>
+          <span>Identitate</span>
+          <span>Comunicare</span>
+          <span>Content Strategy</span>
+          <span>Marketing Strategy</span>
+        </div>
+
+        <span class="small-label">Un prim pas spre o direcție mai bună.</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+      <div class="reveal">
+        <div class="eyebrow">Contact</div>
+        <h2 class="section-title">Hai să discutăm despre <em>direcția ta.</em></h2>
+
+        <p class="contact-copy">
+          Fie că ești la început de drum, îți dezvolți businessul sau simți că brandul tău are nevoie de o repoziționare, primul pas este o conversație clară despre obiective și provocări.
+        </p>
+
+        <div class="contact-details">
+          <span>Scrie-mi</span>
+          <a href="mailto:marianapastean.studio@gmail.com">marianapastean.studio@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="small-label">Strategic collaboration</div>
+        <h3>Un brand mai clar începe cu întrebările potrivite.</h3>
+        <p>
+          Povestește-mi despre businessul tău, obiectivele pe care le urmărești și provocările pe care vrei să le depășești. Voi analiza contextul și vom putea discuta despre o posibilă direcție de colaborare.
+        </p>
+        <a href="mailto:marianapastean.studio@gmail.com?subject=Discutie%20despre%20ARVANA" class="button button-primary">
+          Începe o conversație
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">ARVANA</div>
+        <div class="footer-tagline">Strategic Marketing & Brand Development</div>
+      </div>
+
       <div class="footer-links">
         <a href="#about">Despre</a>
         <a href="#services">Servicii</a>
-        <a href="#audit">Audit</a>
+        <a href="#audit">Audit gratuit</a>
         <a href="#contact">Contact</a>
       </div>
-      <span class="copyright">© 2026 ARVANA DIGITAL MARKETING</span>
     </div>
-  </div>
-</footer>
 
-<script>
-/* NAVIGATION */
-const header = document.getElementById('header');
-const progress = document.getElementById('progress');
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> ARVANA Digital Marketing. Toate drepturile rezervate.</span>
+      <span>Direcție clară. Branduri cu valoare.</span>
+    </div>
+  </footer>
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  menuToggle.textContent = navLinks.classList.contains('open') ? '×' : '☰';
-});
+  <script>
+    // CURRENT YEAR
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    menuToggle.textContent = '☰';
-  });
-});
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("nav");
 
-/* REVEAL */
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-},{threshold:.12});
-
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-/* SCROLL-DRIVEN SCENES */
-const scenes = [...document.querySelectorAll('[data-scene]')];
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-function clamp(value,min,max){
-  return Math.max(min,Math.min(max,value));
-}
-function lerp(a,b,t){
-  return a+(b-a)*t;
-}
-function smooth(t){
-  return t*t*(3-2*t);
-}
-
-function animateScene(scene, progressValue){
-  const copy = scene.querySelector('.scene-copy');
-  const visual = scene.querySelector('.scene-visual');
-  const index = Number(scene.dataset.scene);
-  const t = clamp(progressValue,0,1);
-  const s = smooth(t);
-
-  if(!copy || !visual) return;
-
-  if(index === 0){
-    copy.style.transform = `translate3d(${lerp(-70,0,s)}px,${lerp(35,-10,s)}px,0)`;
-    copy.style.opacity = clamp(lerp(.35,1,s),0,1);
-    visual.style.transform = `translate3d(${lerp(65,-30,s)}px,${lerp(60,-35,s)}px,0) scale(${lerp(.65,1.08,s)})`;
-    const sculpture = scene.querySelector('.brand-sculpture');
-    sculpture.style.transform = `rotate(${lerp(-45,15,t)}deg) scale(${lerp(.75,1.1,s)})`;
-  }
-
-  if(index === 1){
-    copy.style.transform = `translate3d(${lerp(70,0,s)}px,${lerp(-30,10,s)}px,0)`;
-    copy.style.opacity = clamp(lerp(.3,1,s),0,1);
-    visual.style.transform = `translate3d(${lerp(-90,25,s)}px,${lerp(55,-30,s)}px,0) scale(${lerp(.7,1.1,s)})`;
-    const graphic = scene.querySelector('.position-graphic');
-    graphic.style.transform = `rotate(${lerp(-35,35,t)}deg) scale(${lerp(.75,1.05,s)})`;
-  }
-
-  if(index === 2){
-    copy.style.opacity = clamp(1-Math.abs(t-.48)*1.2,.25,1);
-    copy.style.transform = `translate3d(0,${lerp(45,-30,s)}px,0) scale(${lerp(.85,1,s)})`;
-    visual.style.transform = `translate3d(${lerp(-30,30,s)}px,${lerp(80,-55,s)}px,0) scale(${lerp(.65,1.12,s)})`;
-    const network = scene.querySelector('.network');
-    network.style.transform = `rotate(${lerp(-20,25,t)}deg)`;
-  }
-
-  if(index === 3){
-    copy.style.transform = `translate3d(${lerp(75,-10,s)}px,${lerp(35,-15,s)}px,0)`;
-    copy.style.opacity = clamp(lerp(.3,1,s),0,1);
-    visual.style.transform = `translate3d(${lerp(-100,35,s)}px,${lerp(60,-20,s)}px,0) scale(${lerp(.72,1.08,s)})`;
-    const panels = scene.querySelectorAll('.content-panel');
-    panels[0].style.transform = `translate3d(${lerp(-80,0,s)}px,${lerp(45,-10,s)}px,0) rotate(${lerp(-20,-7,s)}deg)`;
-    panels[1].style.transform = `translate3d(${lerp(80,0,s)}px,${lerp(-45,0,s)}px,0) rotate(${lerp(20,7,s)}deg)`;
-  }
-
-  if(index === 4){
-    copy.style.transform = `translate3d(${lerp(-70,0,s)}px,${lerp(40,-10,s)}px,0)`;
-    copy.style.opacity = clamp(lerp(.35,1,s),0,1);
-    visual.style.transform = `translate3d(${lerp(90,-35,s)}px,${lerp(70,-25,s)}px,0) scale(${lerp(.72,1.05,s)})`;
-    const bars = scene.querySelectorAll('.growth-bars span');
-    bars.forEach((bar,i) => {
-      const delay = i*.07;
-      const amount = clamp((t-delay)/.65,0,1);
-      bar.style.transform = `scaleY(${Math.max(.05,amount)})`;
+    menuToggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "×" : "☰";
     });
-    const path = document.getElementById('growthPath');
-    if(path){
-      path.style.strokeDashoffset = 1000-(1000*s);
-    }
-  }
-}
 
-let ticking = false;
-
-function updateScroll(){
-  const scrollY = window.scrollY;
-  const total = document.documentElement.scrollHeight-window.innerHeight;
-  progress.style.width = `${total>0?(scrollY/total)*100:0}%`;
-  header.classList.toggle('scrolled',scrollY>40);
-
-  scenes.forEach(scene => {
-    const rect = scene.getBoundingClientRect();
-    const totalDistance = scene.offsetHeight-window.innerHeight;
-    const raw = totalDistance>0 ? clamp(-rect.top/totalDistance,0,1) : 0;
-    animateScene(scene,raw);
-  });
-
-  if(!reducedMotion){
-    document.querySelectorAll('[data-parallax]').forEach(el => {
-      const rect = el.getBoundingClientRect();
-      const center = rect.top+rect.height/2-window.innerHeight/2;
-      const amount = center/window.innerHeight;
-      el.style.translate = `0 ${clamp(amount*-18,-22,22)}px`;
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
     });
-  }
 
-  ticking=false;
-}
+    // HEADER AND SCROLL PROGRESS
+    const header = document.getElementById("header");
+    const progress = document.getElementById("progress");
 
-window.addEventListener('scroll',()=>{
-  if(!ticking){
-    requestAnimationFrame(updateScroll);
-    ticking=true;
-  }
-},{passive:true});
+    function updateScrollUI() {
+      const scrollTop = window.scrollY;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const percentage = scrollable > 0 ? (scrollTop / scrollable) * 100 : 0;
 
-window.addEventListener('resize',updateScroll);
-window.addEventListener('load',updateScroll);
-updateScroll();
-
-/* ANCHOR SCROLL */
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-  anchor.addEventListener('click',function(e){
-    const target=document.querySelector(this.getAttribute('href'));
-    if(target){
-      e.preventDefault();
-      target.scrollIntoView({behavior:reducedMotion?'auto':'smooth',block:'start'});
+      progress.style.width = percentage + "%";
+      header.classList.toggle("scrolled", scrollTop > 40);
     }
-  });
-});
-</script>
+
+    window.addEventListener("scroll", updateScrollUI, { passive: true });
+    updateScrollUI();
+
+    // REVEAL ANIMATIONS
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.12
+    });
+
+    revealElements.forEach(element => revealObserver.observe(element));
+
+    // SCROLL-BASED MARKETING SCENES
+    const scenes = document.querySelectorAll(".scene");
+    const strategyNodes = document.querySelectorAll(".strategy-node");
+    const matrixPoints = document.querySelectorAll(".matrix-point");
+
+    function updateScenes() {
+      const viewportCenter = window.innerHeight * 0.5;
+
+      scenes.forEach(scene => {
+        const rect = scene.getBoundingClientRect();
+        const sceneCenter = rect.top + rect.height * 0.5;
+        const distance = Math.abs(viewportCenter - sceneCenter);
+        const active = distance < window.innerHeight * 0.7;
+
+        scene.classList.toggle("active", active);
+
+        const copy = scene.querySelector(".scene-copy");
+        const visual = scene.querySelector(".scene-visual");
+
+        if (window.innerWidth > 760) {
+          const progressInScene = Math.max(0, Math.min(1,
+            (viewportCenter - rect.top) / Math.max(rect.height, 1)
+          ));
+
+          if (copy && visual) {
+            const direction = scene.dataset.scene === "2" || scene.dataset.scene === "4" ? -1 : 1;
+            const movement = (progressInScene - 0.5) * 38;
+
+            copy.style.transform = `translate3d(0, ${-movement}px, 0)`;
+            visual.style.transform = `translate3d(0, ${movement}px, 0)`;
+            visual.style.opacity = 0.78 + (1 - Math.abs(progressInScene - 0.5) * 2) * 0.22;
+
+            if (direction < 0) {
+              visual.style.transform += " scale(1.015)";
+            }
+          }
+        } else {
+          if (copy) copy.style.transform = "";
+          if (visual) {
+            visual.style.transform = "";
+            visual.style.opacity = "";
+          }
+        }
+      });
+
+      // Positioning map: highlight the conceptual differentiated position
+      const positionScene = document.querySelector('[data-scene="2"]');
+      if (positionScene) {
+        const rect = positionScene.getBoundingClientRect();
+        const active = rect.top < window.innerHeight * 0.7 &&
+                       rect.bottom > window.innerHeight * 0.3;
+
+        matrixPoints.forEach(point => {
+          point.classList.toggle("highlight", active && point.classList.contains("p4"));
+        });
+      }
+
+      // Strategy framework: activate nodes progressively
+      const strategyScene = document.querySelector('[data-scene="3"]');
+      if (strategyScene) {
+        const rect = strategyScene.getBoundingClientRect();
+        const active = rect.top < window.innerHeight * 0.7 &&
+                       rect.bottom > window.innerHeight * 0.3;
+
+        const rawProgress = (window.innerHeight * 0.7 - rect.top) /
+                            (rect.height + window.innerHeight * 0.4);
+        const currentStep = Math.max(0, Math.min(4, Math.floor(rawProgress * 5)));
+
+        strategyNodes.forEach((node, index) => {
+          node.classList.toggle("active", active && index <= currentStep);
+        });
+      }
+    }
+
+    window.addEventListener("scroll", updateScenes, { passive: true });
+    window.addEventListener("resize", updateScenes);
+    updateScenes();
+
+    // FUNNEL ANIMATION
+    const funnelGraphic = document.getElementById("funnelGraphic");
+
+    const funnelObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          funnelGraphic.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.25 });
+
+    funnelObserver.observe(funnelGraphic);
+  </script>
+
 </body>
 </html>
 ```
